@@ -1,0 +1,13 @@
+[Unit]
+Description=Aggregate resource limits for LeanEM verification jobs
+
+[Slice]
+CPUAccounting=yes
+CPUQuota=200%
+CPUWeight=10
+MemoryAccounting=yes
+MemoryHigh=8G
+MemoryMax=12G
+MemorySwapMax=0
+TasksMax=128
+IOWeight=10

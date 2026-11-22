@@ -1,0 +1,593 @@
+{
+  "paper_commit": "f55e79081cd35fd36df7f9bbed87e0acce059beb",
+  "roots": [
+    "GSTC.Scattering.BIParameterization",
+    "GSTC.Scattering.BIInverseCompleteness",
+    "GSTC.Scattering.BIAmplitudeFree",
+    "GSTC.Scattering.ClassMinimumBudget",
+    "GSTC.Scattering.BICompletionMinimum",
+    "GSTC.Scattering.BIFrontierCompletion",
+    "GSTC.Scattering.NBCompletionMinimum",
+    "GSTC.Scattering.NBPeakEfficiency",
+    "GSTC.Scattering.NBFeasibilityClassification",
+    "GSTC.Scattering.BIUnitaryRealizability",
+    "GSTC.Scattering.FeasibilityRotation",
+    "GSTC.Scattering.JonesFrameSpectralMinimum"
+  ],
+  "modules": [
+    {
+      "module": "GSTC.Prelude",
+      "source_sha256": "66a3a092e93e1a1e44c8231151fb296ecf45567c3eaca6e5a14967ae576afd08",
+      "public_sha256": "0e0a7c1c65932b193db87d8e76b18eb6a8b2ed6432bc1e63418abca389739dac",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Prelude"
+    },
+    {
+      "module": "GSTC.Scattering.Admittance",
+      "source_sha256": "dc5e561be62e94d819ef66aa541c8a9d2dee3232e920a401a57b38775043d3de",
+      "public_sha256": "95f9ef48f3e7ede2b28678a7812c4649d623703d4f18b87aec49cc6eb3e9335c",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Admittance"
+    },
+    {
+      "module": "GSTC.Scattering.Azimuth",
+      "source_sha256": "8384f147fcf175aec17a9e4bf0d3b8b86a863f55ced6ccf247a708757a6cb291",
+      "public_sha256": "3b2b69bb3ef9e88d185f70c29af3a72caecfe839935876851784373e8f72bc5e",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Azimuth"
+    },
+    {
+      "module": "GSTC.Scattering.BIAdjugate",
+      "source_sha256": "7919b10fd53639c0d4ed0c595bdeb45f1c2ac2f0d9442faab4bcdcec5c58f86d",
+      "public_sha256": "d8aae97a2b8578fe4b3e74a89c8e876343f139480785d380b3c104e5cb322237",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIAdjugate"
+    },
+    {
+      "module": "GSTC.Scattering.BIAmplitudeFree",
+      "source_sha256": "54aaec34da53e8617dd202af315afbdcfaca6f7cfa7142d03cb09659e40985fe",
+      "public_sha256": "66ca8c8340bca1c81e570f5bf52a2964432679e99742394092b81bf3f1de6119",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIAmplitudeFree"
+    },
+    {
+      "module": "GSTC.Scattering.BICompletionMinimum",
+      "source_sha256": "a7a8e6c5ee50bb1cdf811605ec37ba1f3df4f2f920e889eeb64db8156efca80c",
+      "public_sha256": "127269ec37aad3b77a93e6c209f3197abf734ac67c2a2202f23d25146f80481e",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BICompletionMinimum"
+    },
+    {
+      "module": "GSTC.Scattering.BIConversionEquivalence",
+      "source_sha256": "755acec9c7db499cce0cb2ef4dd5ae96b3e8286eddebf4969bf4d6fa1c145b8d",
+      "public_sha256": "332daca7e6e6ffe25530f60d8e4e345a1b9689ffbf63be0ad395d58d8630f9a0",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIConversionEquivalence"
+    },
+    {
+      "module": "GSTC.Scattering.BIFeasibility",
+      "source_sha256": "ffc96cc4706a3d2ed15939fc33bc23ad6feaeb3011804779630b6b5d08a1ea11",
+      "public_sha256": "09514bd95bed0d0fee906ecb5470f6a3a3e5c9a2b757347958456e1a5d70c8ae",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIFeasibility"
+    },
+    {
+      "module": "GSTC.Scattering.BIFrontierCompletion",
+      "source_sha256": "261ac61ca63ebb056c32867b46bf93819104636105111449453972903eee0977",
+      "public_sha256": "798e64920ae4c42f113ff8fc82717feca615077fac09af469ad4b6e4eb5858c3",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIFrontierCompletion"
+    },
+    {
+      "module": "GSTC.Scattering.BIInverseCompleteness",
+      "source_sha256": "5e1056c632ce28fdce59cd46a26686e2acf8562469caf89a5da788864c3d6d2f",
+      "public_sha256": "4b4697ff0681b8625540dfe33416af3e10f2883a459179f1f65b7d266612ceb6",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIInverseCompleteness"
+    },
+    {
+      "module": "GSTC.Scattering.BIParameterization",
+      "source_sha256": "5a16b58fb2173c721cf42767ede7b0a514060adfd6868b35ce4c2e4111f4ed96",
+      "public_sha256": "b6168aa99e13d9c9bda57fecb3fc14b22b93a8fb470f461de3ce2ea4defee1ef",
+      "adaptation": "Omit multipolar imports and two optional bridge theorems; retain all dipolar proofs. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIParameterization"
+    },
+    {
+      "module": "GSTC.Scattering.BIPhysicalFeasibility",
+      "source_sha256": "cd4577fa545655fa06161f6d2b34f437cfcf3842a7828712d92a22206a13d834",
+      "public_sha256": "817a12eaf65e9c7b282e8f95875e881c57fa46d336cb44e55f31530a1ee0956e",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIPhysicalFeasibility"
+    },
+    {
+      "module": "GSTC.Scattering.BIPolynomials",
+      "source_sha256": "b15ef3b8b4bde56ee739a63792a99300f7de634583a2d847ce421c5fefde4c10",
+      "public_sha256": "0bd7e34dfc137a080fc250d19122799f3964655baebb10e20db0e7d2c7ea2eba",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIPolynomials"
+    },
+    {
+      "module": "GSTC.Scattering.BIRankOneCompletion",
+      "source_sha256": "2b11b7dfdabe92beb68203f5ddaa5efae424cecbe4bd72cbe1960f651b2322fd",
+      "public_sha256": "6c9ab607ccadf1540ac19d2875ff6c43a32dd283d979955c1683889efe9cf324",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIRankOneCompletion"
+    },
+    {
+      "module": "GSTC.Scattering.BIRankOneEndpoint",
+      "source_sha256": "f4a16da36894e6922a3a3f054eb6a041545c87489ce76ef127696b48dcaf2dbe",
+      "public_sha256": "673a5ff91e2ec2a7aab15778b6e0600f49c19c782d926f1a6c51964742d5208c",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIRankOneEndpoint"
+    },
+    {
+      "module": "GSTC.Scattering.BIRankOneTheorem",
+      "source_sha256": "c3cacb62e31f63d81fafae0a791561223fea7d605c4a71f4f6ba3ede82ba8eab",
+      "public_sha256": "162e57dd37abbdee856bc16c7c22a14678cf2be8df53b024c6fb5f3b9a06d831",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIRankOneTheorem"
+    },
+    {
+      "module": "GSTC.Scattering.BIRotation",
+      "source_sha256": "18c4ea707a890dcde6e4eba451ef3417cbd29d50c2342675ddb07f20817beea4",
+      "public_sha256": "a0d362db85e5523ff50943a2df2431e523533fc88234209417a2744178b68d21",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIRotation"
+    },
+    {
+      "module": "GSTC.Scattering.BIScattering",
+      "source_sha256": "7edf680e61f8c6bebd83ae85c77fafb1f90683a693b9c98ed65530a7e21bc1da",
+      "public_sha256": "88794725e00695f98bd751d49f6cf3327fd024e1e4a1fb6507783d8574af6f76",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIScattering"
+    },
+    {
+      "module": "GSTC.Scattering.BIUnitaryRealizability",
+      "source_sha256": "05998351420c9007bee2cdd5509af388fecb7f27660ba237a577c84a0573cb8d",
+      "public_sha256": "1d62e7e9eb04e863774cbe2e15f35ea77b788516f51dfdfe1a876794211b3dc9",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIUnitaryRealizability"
+    },
+    {
+      "module": "GSTC.Scattering.BIUnitaryTransmission",
+      "source_sha256": "d9a0880a13af6904b0ea3e5f45cebc7fdc9463044626a8de7f1034d71c1d3f8b",
+      "public_sha256": "ba03783a65949ce60a53b4dbe9627c28f552a1d101b96ebe66179b7798c2fd20",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.BIUnitaryTransmission"
+    },
+    {
+      "module": "GSTC.Scattering.Boundary",
+      "source_sha256": "bdb5323d36a1b2211c1180102ea6c97b194f77c4c9ef2de2f3c44ef33931c93b",
+      "public_sha256": "b07b3e683781643c955672d6d99073fdd6247a54322fb027e11783015bd7b430",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Boundary"
+    },
+    {
+      "module": "GSTC.Scattering.ClassFeasibility",
+      "source_sha256": "8846832b6058395e2ec06222a217341b6d187ffd11aeffdbe08b14c52aa2ddf9",
+      "public_sha256": "ed425299783c5e604bcc3e633c9e60bf7fddd75db36b35d91b808ad51ffaf8d4",
+      "adaptation": "Omit multipolar import and unused complex-wavenumber bridge; retain real normalization and all feasible-set proofs. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.ClassFeasibility"
+    },
+    {
+      "module": "GSTC.Scattering.ClassMinimumBudget",
+      "source_sha256": "0a73ebcb812f1338fddccc5c20e8cc2bebbf9cbf2c67c4049281935352141c67",
+      "public_sha256": "7437001c1550299db428c7145c63b9f3febfb4b5ff45439d68d432a97291f295",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.ClassMinimumBudget"
+    },
+    {
+      "module": "GSTC.Scattering.ClassPeakEfficiency",
+      "source_sha256": "6d44e986ba2a547c96b049a0ebfcdb0dc650e9e4e8279ddcaceeb9366cd32d4e",
+      "public_sha256": "54ab81c9621ace406e913f5462e51522f4cf4b3f3d0c5fc20c35a1de21d7ad97",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.ClassPeakEfficiency"
+    },
+    {
+      "module": "GSTC.Scattering.Coupling",
+      "source_sha256": "8aa01030cff3ed65c9f8d2d3e99cfb7c7147d2fd8108e14a560ea256f682d04b",
+      "public_sha256": "8b63040a3c8c7de0be2e0894f7652d10fcfebc9c787f8acdd0e7e15a0bd9c356",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Coupling"
+    },
+    {
+      "module": "GSTC.Scattering.Efficiency",
+      "source_sha256": "7264c3fb3fec1102edb791c9f1369234ca5cb9a2525d311020db9a4c147d6b7a",
+      "public_sha256": "3f4ec9b0f7f1fc5ab5efdd5ff3cfb71d426bbeded88a4d14695d08a527bd9bef",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Efficiency"
+    },
+    {
+      "module": "GSTC.Scattering.ElectricOnly",
+      "source_sha256": "5bdf32f9663de12b70951624c4fe99c3759320862aa6aefcb3c5de808b24631f",
+      "public_sha256": "889e2e03366195b329ae48a1e880be8fd0311f4967b401c05619df6e410c221c",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.ElectricOnly"
+    },
+    {
+      "module": "GSTC.Scattering.FeasibilityRotation",
+      "source_sha256": "cb915854ef848c654d064a7a8b5ac4f6929728b7dabfc836fe06ca82c00609bf",
+      "public_sha256": "ec30a9aba9c4bfb8682996b4e5d62cb2b6c21341358666175b036a76d7a505f5",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.FeasibilityRotation"
+    },
+    {
+      "module": "GSTC.Scattering.Frame",
+      "source_sha256": "d78a133ccf6c91e464aa093fbca7b8239f60644fffd67a49b4b2ea82fcce2a8e",
+      "public_sha256": "7ba91ec85858bf8eab08445f98000cb9f4f6a63ca3e10a6a08065b87ab4939d9",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Frame"
+    },
+    {
+      "module": "GSTC.Scattering.Jones",
+      "source_sha256": "81e5dbedf1bed9f84136a060f9f6750311bcfc297bfa06f5f32bb485da45141b",
+      "public_sha256": "579148e5c68e3126b1b5b49cd068744857205f4fd9650d4ecd83c669016f94c0",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Jones"
+    },
+    {
+      "module": "GSTC.Scattering.JonesFrameCorrespondence",
+      "source_sha256": "fe8fae913163d5a2445e3f2cd60cf8b59b928e4148deccdb6f12fc720de1e6e3",
+      "public_sha256": "d43839719d28cac25705beeec78ce4d1f2ab92861dfeb8442a0ed3fd0718eae2",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.JonesFrameCorrespondence"
+    },
+    {
+      "module": "GSTC.Scattering.JonesFrameSpectralMinimum",
+      "source_sha256": "5690df1bd3141e442b774b0a9755f1c8fbfb0943b3bab477e1b39735b09efcdb",
+      "public_sha256": "e7afb8ecfdbffc2b48bdea7504ec41223f6889703f7474b00745585c98633ffe",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.JonesFrameSpectralMinimum"
+    },
+    {
+      "module": "GSTC.Scattering.JonesOperatorClassification",
+      "source_sha256": "a01d84ef3567944278894df7eb1dde565716eeea989478488ca5498e72f10a3f",
+      "public_sha256": "e371ae89467b28c490d10e2714dbe12811bc81cd760e68f9931954199b440af2",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.JonesOperatorClassification"
+    },
+    {
+      "module": "GSTC.Scattering.Losslessness",
+      "source_sha256": "c1b6975a5620393a9c103548e5432dfdc08dafc3378198073d5a91f2b6772150",
+      "public_sha256": "3132849f9a073295d50fbedbfdfd6cb9d048ed5c12d14e98786f499f9a7310e4",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Losslessness"
+    },
+    {
+      "module": "GSTC.Scattering.MagneticOnly",
+      "source_sha256": "5632a044ab8cbe2b9d397d372ff03c8d70bc21964e3fc369dd260d3b60bb6cb7",
+      "public_sha256": "fa3d204e55b87c4bbf0eb2794656a5b270e9b312ec6687e58b17a5abe1f237e4",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.MagneticOnly"
+    },
+    {
+      "module": "GSTC.Scattering.MaterialSpace",
+      "source_sha256": "54043dcba08d67ba2203c52780a7a52cacb108162a0020ec7c076e20e42d67ea",
+      "public_sha256": "f121bd47f1e517256706dbaa78f72e8c8d12a77f93b27d500ae60457c9919233",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.MaterialSpace"
+    },
+    {
+      "module": "GSTC.Scattering.Matrix",
+      "source_sha256": "8546ad95dfe57fbb7201c3d535fa9e2e235b6bee459521042e698a0bad0e574e",
+      "public_sha256": "05ad9ecf99ece2cadb20698f754a57a1a35fc9f37b895e3075dbca32fb143a2f",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Matrix"
+    },
+    {
+      "module": "GSTC.Scattering.Media",
+      "source_sha256": "3afcadbeeb5222223103d7054ec9530c9d3439f42aefc7de8d5d9ea7676bebc1",
+      "public_sha256": "1831ff202b2b6c18e98278238110a50f2f655c25e42dc0039615c622134dc5e3",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Media"
+    },
+    {
+      "module": "GSTC.Scattering.NBCayley",
+      "source_sha256": "66ca2159f477c757084b33a52897b329272a98fa90bb95301fbdfabeb886b965",
+      "public_sha256": "9f4e1559137246e081be4f24b1c67ced2b2fad18bfb211b74024ffe935260e5f",
+      "adaptation": "Import only the NB GSTC uniqueness support, not single-state/Stokes reachability. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.NBCayley"
+    },
+    {
+      "module": "GSTC.Scattering.NBClass",
+      "source_sha256": "374d6c527836394d05a4666471e9152ab08e00db877a9cceb3ec749f8488aece",
+      "public_sha256": "1d72ff09ff9dcdf811461481347ccf9d36284e0da8ae2acb2333ffaa00df79fa",
+      "adaptation": "Keep NB class/action; omit the unrelated single-state example sheet. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.NBClass"
+    },
+    {
+      "module": "GSTC.Scattering.NBCompletionMinimum",
+      "source_sha256": "6a33ba1f4a758322e64cace7c9a92deb9ed8c534f2d9c15fbc06305b6b8ddd32",
+      "public_sha256": "1886e9dfef1c728fada7f07bd80d88a4aae044bfb471a48da9cbe963a577d6dd",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.NBCompletionMinimum"
+    },
+    {
+      "module": "GSTC.Scattering.NBFeasibilityClassification",
+      "source_sha256": "99e793b20c6d49fcc8585d934062d4756d69ae6d1e72cf0fa571d172a8211226",
+      "public_sha256": "b1f6c1529fece29dd5a8f76c9e5bd05e9f707fdb49b52a8f38e9298878428324",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.NBFeasibilityClassification"
+    },
+    {
+      "module": "GSTC.Scattering.NBOutgoingUniqueness",
+      "source_sha256": "1cd9ab709dfebd8b6e3c9d8fad39eba865c1536736e88e40eab7378bef7b3d4d",
+      "public_sha256": "a91464f1551a28b1b7d86fd175dcd3651fa09347a0920e982ff788576be3d1ee",
+      "adaptation": "Verbatim outgoing uniqueness from NBArbitrary and four elementary matrix lemmas from NBArbitrary/NB; omit single-state synthesis. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "additional_source_sha256": {
+        "LeanEM.EM.Scattering.NB": "a8c7b1b66fc6ce3637dd3727f35a89e71a2e87ad782538c00766924da713f33b"
+      },
+      "source_module": "LeanEM.EM.Scattering.NBOutgoingUniqueness"
+    },
+    {
+      "module": "GSTC.Scattering.NBPeakEfficiency",
+      "source_sha256": "ac4260b1a09b719824931c0fa60efc55bb083eec9e85acbaa691701859a1955f",
+      "public_sha256": "a98062baca04a466551fd15a2b62af1d182a55a6278e5de3da982f64a3dfa9f1",
+      "adaptation": "Make the retained Takagi dependency explicit after narrowing parity synthesis imports. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.NBPeakEfficiency"
+    },
+    {
+      "module": "GSTC.Scattering.NBPhaseConstraints",
+      "source_sha256": "0613ed575237412823a9d9b66bdb6bbbf23c2fb76822d4515a3e49c20572c166",
+      "public_sha256": "4cd553daf9ce40cf4e065de05d9ba6a05d45f818e47e5fe9e86abbcc1eb0b486",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.NBPhaseConstraints"
+    },
+    {
+      "module": "GSTC.Scattering.NBPoleExclusions",
+      "source_sha256": "cdc16e7aa03a0d9bbc3ef516ace0174732bddb9be6d40c6d0e041b33a09900ad",
+      "public_sha256": "d56e893e6e9f6c1c3d5aadadf5a1cd091afb653311f62a8c10861347e49cf356",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.NBPoleExclusions"
+    },
+    {
+      "module": "GSTC.Scattering.NBRealizability",
+      "source_sha256": "1c2c9659d600707d38989b8fc82d82bd695beb07a4af312a19a047b894cd7bb7",
+      "public_sha256": "f357d2d9393a891428deae48afd4f9452b1426b925c8d55c64220e238edbff0d",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.NBRealizability"
+    },
+    {
+      "module": "GSTC.Scattering.NBSynthesis",
+      "source_sha256": "dfefe6d6357c06015625f3856cc6933c238a863a9b9c66270cd89e47ac47bda8",
+      "public_sha256": "810c175f8c5d49a57f5bd5353c05cca2ac10837f0a829554415aff6c7d468330",
+      "adaptation": "Retain parity synthesis; omit unrelated finite-criterion corollaries. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.NBSynthesis"
+    },
+    {
+      "module": "GSTC.Scattering.NBTakagi",
+      "source_sha256": "ef395c7fcea781f2db6a77fd9c89a50aebdf9d657a873a998290f0323fbfa451",
+      "public_sha256": "db97c845ce2905a7e11b0624e34de265eb18e7e8974c609857813a5c7cd2be93",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.NBTakagi"
+    },
+    {
+      "module": "GSTC.Scattering.NBTakagiExistence",
+      "source_sha256": "a98a4564a72329ee7b7f7d91816bd04642303b75664a71ff015de6187df01e20",
+      "public_sha256": "2f158e9a1ad49fac62defb04000d057b134d9d14c051cd7b7ff7f5d6dfa7863e",
+      "adaptation": "Retain Takagi existence; append the verbatim imaginary-diagonal-defect lemma needed by the peak theorem instead of importing the whole finite criterion. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "additional_source_sha256": {
+        "LeanEM.EM.Scattering.NBFiniteCriterion": "375283fead69f2a81f58ec42406036440cb207cc74361e14090dad0c9585c2f0"
+      },
+      "source_module": "LeanEM.EM.Scattering.NBTakagiExistence"
+    },
+    {
+      "module": "GSTC.Scattering.NormalIncidence",
+      "source_sha256": "4c641a3e14c340c4f8976e1147e1f8bc3fd073f2fa95259bac1d42b2ed6ee785",
+      "public_sha256": "ec1aa9ea482efd3b724ac961e5b36e482dd7b224dc1da49d7df9b3b7a600481a",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.NormalIncidence"
+    },
+    {
+      "module": "GSTC.Scattering.Operator.BoundaryOperator",
+      "source_sha256": "9b52cd861e1abda5548b609c2f89b902d57459b83c594ed11ae0c7d9b57c4df9",
+      "public_sha256": "b568d47d84379c0431f51bf131137f1ff4fa6b395d5d93d35429ec701093c07e",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Operator.BoundaryOperator"
+    },
+    {
+      "module": "GSTC.Scattering.Operator.Solvability",
+      "source_sha256": "0588d9126c71e6716ea79e0d9c368816e0707549ba1bb8093efd9624513ad2c3",
+      "public_sha256": "c38b7942963110d78776f03b92468898eff018cbf1536fae141ba2a1bb03dccc",
+      "adaptation": "Keep generic boundary-operator solvability; omit full-gradient multipolar specializations. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Operator.Solvability"
+    },
+    {
+      "module": "GSTC.Scattering.OrthogonalClasses",
+      "source_sha256": "eaa489c5e2f7c48f51b6f5959051ca0cdfc50735a8e90e2620294ca8673b3ecf",
+      "public_sha256": "181ed1c76d3119c31b92e0876f998bb2ec8783063897775215b4d032ccaa4628",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.OrthogonalClasses"
+    },
+    {
+      "module": "GSTC.Scattering.OrthogonalSpectralBridge",
+      "source_sha256": "73410619c441aa9c292622e16c647bcf049c0370851e87e2655419f4504e8c59",
+      "public_sha256": "42471b34a28ff0397ac0584da9fb033970dee6838537841f4c86ef791d7b4275",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.OrthogonalSpectralBridge"
+    },
+    {
+      "module": "GSTC.Scattering.OrthogonalSpectralMinimum",
+      "source_sha256": "24fbdec193fa937c6cc49306fdf23a9a0d43f766d8d11970cb964065d0ac3368",
+      "public_sha256": "7824cb2740e64e91bbcd50fe9d61427c7a63cddfef841796bd617edc94a177ad",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.OrthogonalSpectralMinimum"
+    },
+    {
+      "module": "GSTC.Scattering.OrthogonalSpectralNB",
+      "source_sha256": "83859d4d310a2e216b7f3060ad65787bedb90e9146164530236cb298287aee6f",
+      "public_sha256": "7481ccad9831fb14315bc0481f69d63e9e2ad09b84ce2c1f59028adb53a5a78f",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.OrthogonalSpectralNB"
+    },
+    {
+      "module": "GSTC.Scattering.OrthogonalSpectralOptimum",
+      "source_sha256": "6764d5d89b174458e9b7da74d1a6abfdf14d23c64587bb401de58f9bd1b521f6",
+      "public_sha256": "3fab2394bbaf8ce73ce846efad2d1de9309fca1ed3064d7f4354f545146a48a5",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.OrthogonalSpectralOptimum"
+    },
+    {
+      "module": "GSTC.Scattering.OrthogonalSpectralPhase",
+      "source_sha256": "f384e2dad2f5cc2bd55dfbcfd2649a0be17a6e21921850af3facfb54e34e7e59",
+      "public_sha256": "4df9b181da1f27e00f3b6c4b0a4114f809c187f1ea57c6fc86ad2cced58d0c32",
+      "adaptation": "Omit one linter-confirmed no-op push_cast tactic and trailing blank line; preserve theorem statements and proof argument. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.OrthogonalSpectralPhase"
+    },
+    {
+      "module": "GSTC.Scattering.OrthogonalSpectralPole",
+      "source_sha256": "6dde6d3c5744c46a43025f8a66b1d349cb9f417895056466eeddaee6bcfbdcb6",
+      "public_sha256": "bfd0a9e062990a3650a897dd84167c409aee3fe7a81245bcd79af408cc3a7238",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.OrthogonalSpectralPole"
+    },
+    {
+      "module": "GSTC.Scattering.PauliRepresentation",
+      "source_sha256": "dae65d24994b272999a0891ec904b8c2f53c5e69528ebef9e25da1945da4b66a",
+      "public_sha256": "28a64a0ec07e1d45867209f010502c51035080cc87778eb18ce8466f4b581421",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.PauliRepresentation"
+    },
+    {
+      "module": "GSTC.Scattering.Power",
+      "source_sha256": "16ccf89e6027c19dfda3f36dc334af91b2b34e0fe1101bafd288da9122463b4b",
+      "public_sha256": "d0dced4563eb545a3cd4bb8a9efeaed47ab3a020c252a0083e91cbf6073f8851",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Power"
+    },
+    {
+      "module": "GSTC.Scattering.Reciprocity",
+      "source_sha256": "6b96c56fbef9f41ce21197f90f37c69b0fcf1c4296c8625fb358ca0236af5456",
+      "public_sha256": "7a0aa2a9bd0c12e9775e9b195483ba5aca0b118240cfe8ee3b38d90d662a2ef6",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Reciprocity"
+    },
+    {
+      "module": "GSTC.Scattering.Reduction",
+      "source_sha256": "14631e7ca3ab958405144ca577052bdb76609b61d1073baf985421e8dc45e6cb",
+      "public_sha256": "8b90a88e08fdca6c2705097386e4686c4667fa1a59044cb2a73d3bfb41588960",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Reduction"
+    },
+    {
+      "module": "GSTC.Scattering.Scattering",
+      "source_sha256": "38fe9d6b90d8dd2af5a9ef9026d66f1ab109ab4bdd0855c8107c11f3563ae73e",
+      "public_sha256": "31646f4d625f53d631d334e4e3631084510aec8fb40fc8bde0b4091dc57f5262",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Scattering"
+    },
+    {
+      "module": "GSTC.Scattering.ScatteringMatrix",
+      "source_sha256": "b9754ba16d4d6d9309b580348e1b8fc4778b11bf5d1c842c8b0524e3c9a6e094",
+      "public_sha256": "cf41bca1c506f4f58304d29130928aa346c12fa9e53f7f66a97d04ec3d918cf0",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.ScatteringMatrix"
+    },
+    {
+      "module": "GSTC.Scattering.SheetAlgebra",
+      "source_sha256": "036b3485322d991169aed64fab51157f6bdb5d288b759b57583ead91914bdcfb",
+      "public_sha256": "f2510d192b9d049e9ebf7e59b71a84932f2a2e657211c7c78c868332d41ed39c",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.SheetAlgebra"
+    },
+    {
+      "module": "GSTC.Scattering.SpectralMatrixSupport",
+      "source_sha256": "d5ae5d6068ff08ebf40744301780167d5a5676f9e8cf1885d4ac0474206543e4",
+      "public_sha256": "17f2d049811555610f2beba94d4565d920c46b7d2800e9d46be03afc8b496b02",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.SpectralMatrixSupport"
+    },
+    {
+      "module": "GSTC.Scattering.Susceptibility",
+      "source_sha256": "5353e6a0a98e63fcbc4630c75f3831095143186a9b017152929b7e139726ad5b",
+      "public_sha256": "16844fa4bf5a37aba2c171551ad306a1335da1f6bee8ef4eb411a95ca2ac798a",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Susceptibility"
+    },
+    {
+      "module": "GSTC.Scattering.SusceptibilityBudget",
+      "source_sha256": "6a7ee168647cda055bf7f1f053993560391f001af704cb3ef1d12e1abe7e6d2b",
+      "public_sha256": "abaef05aa4d3023e96a5999a2eb1b86d5d7f7d5f71aa018625692eab51ebdf28",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.SusceptibilityBudget"
+    },
+    {
+      "module": "GSTC.Scattering.SusceptibilityBudgetPolynomials",
+      "source_sha256": "d553f0f1526c2ad38893e1bfd8f3868d4c70d8897c9782b26765fa20b2460c80",
+      "public_sha256": "a10b0336a58c5ef44e009cc4cb23eb2d949f801722753729be548e805dcaaa16",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.SusceptibilityBudgetPolynomials"
+    },
+    {
+      "module": "GSTC.Scattering.TransverseRotation",
+      "source_sha256": "31cc081a0de33d04ce4561fe314c57195a9832c6ccdefbe83b9b8b97c1316288",
+      "public_sha256": "fb261a496f4f6a02a0b293d4ec575e11a34bae58d390145d910741dc10a93be1",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.TransverseRotation"
+    },
+    {
+      "module": "GSTC.Scattering.Unitarity",
+      "source_sha256": "28e9c50a2f8cac2c99a02dd4730240e687b85148a728bbd4c1d0fdfdaaea03f6",
+      "public_sha256": "ac6b277465a121e372ef87db6cd4c98966beea5b3b2a421bee6537903b782da4",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
+      "source_module": "LeanEM.EM.Scattering.Unitarity"
+    }
+  ],
+  "paper_theorems": [
+    "GSTC.Scattering.encode_decode",
+    "GSTC.Scattering.decode_encode",
+    "GSTC.Scattering.existsUnique_encoding",
+    "GSTC.Scattering.bi_unique_scattering",
+    "GSTC.Scattering.BIInverse.bi_inverse_complete",
+    "GSTC.Scattering.BIInverse.parametersForResponse_unique_gstc",
+    "GSTC.Scattering.BIAmplitudeFree.physicalFeasible_iff_amplitudeFreePolynomialFeasible",
+    "GSTC.Scattering.BIAmplitudeFree.amplitudeFreeConstraints_vanishing",
+    "GSTC.Scattering.ClassMinimumBudget.minimumBudget_eq_top_iff",
+    "GSTC.Scattering.ClassMinimumBudget.minimumBudget_attained",
+    "GSTC.Scattering.ClassMinimumBudget.capFeasible_mono",
+    "GSTC.Scattering.ClassMinimumBudget.feasibleCaps_eq_Ici",
+    "GSTC.Scattering.ClassMinimumBudget.feasibleCaps_eq_empty",
+    "GSTC.Scattering.ClassMinimumBudget.feasibleCaps_closed",
+    "GSTC.Scattering.ClassMinimumBudget.minimumBudget_BI_le_NB",
+    "GSTC.Scattering.ClassMinimumBudget.capFeasible_polynomial",
+    "GSTC.Scattering.SpectralMatrixSupport.opNorm_orthogonal_conjugation",
+    "GSTC.Scattering.SpectralMatrixSupport.opNorm_le_iff_polynomial",
+    "GSTC.Scattering.SusceptibilityBudget.spectralBudgets_rotateParams",
+    "GSTC.Scattering.SusceptibilityBudget.spectralSeparateSublevel_compact",
+    "GSTC.Scattering.SusceptibilityBudget.spectralBudget_minOn_closed",
+    "GSTC.Scattering.SusceptibilityBudgetPolynomials.spectralTotalBudget_polynomial",
+    "GSTC.Scattering.FeasibilityRotation.forwardTransmission_rotate",
+    "GSTC.Scattering.FeasibilityRotation.classMaterials_rotate_iff",
+    "GSTC.Scattering.FeasibilityRotation.minimumBudget_rotate",
+    "GSTC.Scattering.BICompletionMinimum.response_symmetric_unitary",
+    "GSTC.Scattering.BICompletionMinimum.minimum_eq_completionMinimum",
+    "GSTC.Scattering.BICompletionMinimum.completion_minimum_attained",
+    "GSTC.Scattering.BICompletionMinimum.minimum_at_nonsingular_class_peak",
+    "GSTC.Scattering.BIRankOneTheorem.rank_one_completion_iff_explicit",
+    "GSTC.Scattering.BIRankOneTheorem.endpoint_unique",
+    "GSTC.Scattering.BIRankOneTheorem.rank_one_completion_has_bi_params",
+    "GSTC.Scattering.BIFrontierCompletion.admissible_iff_rankOne",
+    "GSTC.Scattering.BIFrontierCompletion.admissible_has_rankOne",
+    "GSTC.Scattering.NBCompletionMinimum.minimum_eq_completionMinimum",
+    "GSTC.Scattering.NBCompletionMinimum.completion_minimum_attained",
+    "GSTC.Scattering.NBCompletionMinimum.completionCost_eq_spectralTotalBudget",
+    "GSTC.Scattering.NBCompletionMinimum.minimum_eq_phaseCompletionMinimum_at_peak",
+    "GSTC.Scattering.NBCompletionMinimum.phaseCompletion_minimum_attained_at_peak",
+    "GSTC.Scattering.NBCompletionMinimum.minimum_at_nonsingular_forced_peak",
+    "GSTC.Scattering.NBFeasibilityClassification.nb_unitary_feasible_iff_symmetric",
+    "GSTC.Scattering.NBFeasibilityClassification.two_state_nb_feasibility",
+    "GSTC.Scattering.NBPhaseConstraints.nb_two_state_phase_forced",
+    "GSTC.Scattering.NBPeakEfficiency.eq25_nb_peak",
+    "GSTC.Scattering.NBPeakEfficiency.nb_contraction_attained",
+    "GSTC.Scattering.BIUnitaryRealizability.bi_unitary_realizable",
+    "GSTC.Scattering.BIUnitaryRealizability.two_state_bi_feasibility_iff_overlap",
+    "GSTC.Scattering.phaseSheetBudget",
+    "GSTC.Scattering.OrthogonalSpectralOptimum.fixedPhase_spectral_optimum",
+    "GSTC.Scattering.OrthogonalSpectralPhase.biMinimum_eq_phaseFamily",
+    "GSTC.Scattering.OrthogonalSpectralPhase.nbMinimum_eq_phaseFamily",
+    "GSTC.Scattering.JonesFrameCorrespondence.frameFamily_iff_columns",
+    "GSTC.Scattering.JonesFrameSpectralMinimum.frame_minima_attained"
+  ],
+  "minimality": "Source-command closure of the listed paper theorem roots, including elaboration support; no claim of shortest possible alternative proofs.",
+  "proof_dependency_source_commands": 1228
+}

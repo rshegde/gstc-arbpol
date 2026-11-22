@@ -1,0 +1,14 @@
+module
+
+public import GSTC.Scattering.BIParameterization
+public import GSTC.Scattering.BIInverseCompleteness
+public import GSTC.Scattering.BIAmplitudeFree
+public import GSTC.Scattering.ClassMinimumBudget
+public import GSTC.Scattering.BICompletionMinimum
+public import GSTC.Scattering.BIFrontierCompletion
+public import GSTC.Scattering.NBCompletionMinimum
+public import GSTC.Scattering.NBPeakEfficiency
+public import GSTC.Scattering.NBFeasibilityClassification
+public import GSTC.Scattering.BIUnitaryRealizability
+public import GSTC.Scattering.FeasibilityRotation
+public import GSTC.Scattering.JonesFrameSpectralMinimum

@@ -1,0 +1,332 @@
+{
+  "namespace": "GSTC",
+  "paper_theorems": 53,
+  "original_library_modules": 79,
+  "library_modules": 73,
+  "original_library_lines": 33517,
+  "library_lines": 13563,
+  "original_audited_theorems": 2479,
+  "audited_theorems": 1538,
+  "build_jobs": 3146,
+  "type_comparison_method": "Lean expression comparison after namespace normalization and binder-name/metadata erasure, with definitional equality checked for any remaining difference.",
+  "theorems": [
+    {
+      "theorem": "GSTC.Scattering.encode_decode",
+      "unchanged": true,
+      "canonical_type_sha256": "22a17a54e03c48349bfe050f9433ee904c2555a5d49327b0d727df1b699e2010",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.decode_encode",
+      "unchanged": true,
+      "canonical_type_sha256": "cca2a326046e2aed39f52ee069d430535c2396f61b917fb4df41656dd2b52899",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.existsUnique_encoding",
+      "unchanged": true,
+      "canonical_type_sha256": "f365be96cb2e89168e489bec9d76a553b71447fe344a745667426f976500a1f8",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.bi_unique_scattering",
+      "unchanged": true,
+      "canonical_type_sha256": "22b3abc93cfd8f036b5da9ca084c3c83d0a692ada105a1725ffcf80ee03a26a8",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.BIInverse.bi_inverse_complete",
+      "unchanged": true,
+      "canonical_type_sha256": "d8c20848a8d3b723e41078a0a4ba48563f3f1d6ab3b521e1354a8eb30eb867ca",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.BIInverse.parametersForResponse_unique_gstc",
+      "unchanged": true,
+      "canonical_type_sha256": "9bbd5abda216b6b5d4071fd7bf372a61ba57e970fd3c27bd524478c2cca1d433",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.BIAmplitudeFree.physicalFeasible_iff_amplitudeFreePolynomialFeasible",
+      "unchanged": true,
+      "canonical_type_sha256": "455b88fe6847ed9ad23d3505093f80d9e16458ca7538abc00286a99b3a066b1e",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.BIAmplitudeFree.amplitudeFreeConstraints_vanishing",
+      "unchanged": true,
+      "canonical_type_sha256": "c2037c0a4fe0613cc8f5fa576ccd80b250c9b85852a53a9034cc8bd9c939bdd0",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.ClassMinimumBudget.minimumBudget_eq_top_iff",
+      "unchanged": true,
+      "canonical_type_sha256": "6f47198a15d27e2691770f71b225f994df60c948e605229ece08048b0bfdc2aa",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.ClassMinimumBudget.minimumBudget_attained",
+      "unchanged": true,
+      "canonical_type_sha256": "badc7e72a42bcae09ff1bb711724c76d53aa3a44ee0c835b52df29d181e502ed",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.ClassMinimumBudget.capFeasible_mono",
+      "unchanged": true,
+      "canonical_type_sha256": "78aeb0aa0cdc9021a20165f578267e1ebbdf678ccf27fce0e833f646160aa281",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.ClassMinimumBudget.feasibleCaps_eq_Ici",
+      "unchanged": true,
+      "canonical_type_sha256": "b11b623c8386e15eb026a537cde24d7451fea3918d6e10a3a7122a866213c2ab",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.ClassMinimumBudget.feasibleCaps_eq_empty",
+      "unchanged": true,
+      "canonical_type_sha256": "c4d71ea65bdb8859bbf22442b58c7df0a03a64155eaf73bb28ea415457d6766e",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.ClassMinimumBudget.feasibleCaps_closed",
+      "unchanged": true,
+      "canonical_type_sha256": "7d260457a41fb600a92c6ce983d7a1cc77e15b9901dca861867b11b40bc0aa73",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.ClassMinimumBudget.minimumBudget_BI_le_NB",
+      "unchanged": true,
+      "canonical_type_sha256": "85d4a996c2925de054fbc4f5866e1736c202ac0cd2f3ed3b853a7062ce551af6",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.ClassMinimumBudget.capFeasible_polynomial",
+      "unchanged": true,
+      "canonical_type_sha256": "af9da20414977d9151c621d5aa8fabe915df9cb3e08cd6344d65c2a8e86e4cba",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.SpectralMatrixSupport.opNorm_orthogonal_conjugation",
+      "unchanged": true,
+      "canonical_type_sha256": "b6f5030c8efb3a7e1c8e44719c0f205da88f5a729f8f60dec6de470b97f691cc",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.SpectralMatrixSupport.opNorm_le_iff_polynomial",
+      "unchanged": true,
+      "canonical_type_sha256": "e8e08f8c92318a08ec9ce97fe93ad573520c6d0ade7562509a86afbd8e517b8e",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.SusceptibilityBudget.spectralBudgets_rotateParams",
+      "unchanged": true,
+      "canonical_type_sha256": "ff00a8d03f4882d5f330e18cb41094449ed08b08a04cf92453a8412b6bfba80c",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.SusceptibilityBudget.spectralSeparateSublevel_compact",
+      "unchanged": true,
+      "canonical_type_sha256": "3ff07a628a51da1e76eff94eac7008e6dedd71cf1cee46f0d645e240652e2d8f",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.SusceptibilityBudget.spectralBudget_minOn_closed",
+      "unchanged": true,
+      "canonical_type_sha256": "b97aadd6e2aaf5dce93d5719ddc55deaec22d79f3986b07420d0bcc7f85c9a05",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.SusceptibilityBudgetPolynomials.spectralTotalBudget_polynomial",
+      "unchanged": true,
+      "canonical_type_sha256": "9e9b300e99d308f1994c82c50c35f0f4ffa1665dbc42d42374e172fbf85501a6",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.FeasibilityRotation.forwardTransmission_rotate",
+      "unchanged": true,
+      "canonical_type_sha256": "6d921e904301664ed36d795a94cd7f247717ddf8fb283f2a3081ba503d87416c",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.FeasibilityRotation.classMaterials_rotate_iff",
+      "unchanged": true,
+      "canonical_type_sha256": "65ce562faf1afe6b4a40ee2d5fb461cf063ee5b0fc479e8784ca0cf15f794b96",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.FeasibilityRotation.minimumBudget_rotate",
+      "unchanged": true,
+      "canonical_type_sha256": "7e0c3bf5a56565cc627c41cb3679ace580babdb904d9a2159725ea33aab49adc",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.BICompletionMinimum.response_symmetric_unitary",
+      "unchanged": true,
+      "canonical_type_sha256": "045cb2e6ca7c2bea20724cf22a55b9b1b8d8f9c6bf5585a57251a1a19b1279c9",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.BICompletionMinimum.minimum_eq_completionMinimum",
+      "unchanged": true,
+      "canonical_type_sha256": "0a5f765f6c2663c28b07fd7fabe9bfc9dc4eb9c5a42e7684647efeb6b2920ad7",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.BICompletionMinimum.completion_minimum_attained",
+      "unchanged": true,
+      "canonical_type_sha256": "bcb1fa8de3a58c698344ee4038f25262c1ea8a2345960431051168f090730bfe",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.BICompletionMinimum.minimum_at_nonsingular_class_peak",
+      "unchanged": true,
+      "canonical_type_sha256": "5c943195dd55688aa414494e9c5e7514dca4ef785c381fb49c93ccf7d49ca1e4",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.BIRankOneTheorem.rank_one_completion_iff_explicit",
+      "unchanged": true,
+      "canonical_type_sha256": "76ba0a4e091b7eedae59b96ef3ade4d084dc2aa21754767927ceb001e11da388",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.BIRankOneTheorem.endpoint_unique",
+      "unchanged": true,
+      "canonical_type_sha256": "abe1f924137d85b0a39758b448673c15a0c6ce5d44697ae32574f2d0fd514c25",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.BIRankOneTheorem.rank_one_completion_has_bi_params",
+      "unchanged": true,
+      "canonical_type_sha256": "942d5dc02b7d4f175748b5e3dafe367aca66c6738ddad43c9cf15b64671b18f4",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.BIFrontierCompletion.admissible_iff_rankOne",
+      "unchanged": true,
+      "canonical_type_sha256": "8510baadbb9777d6881873bf8efb7f98d9301fbb26a2e49c7a21a17c686088bc",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.BIFrontierCompletion.admissible_has_rankOne",
+      "unchanged": true,
+      "canonical_type_sha256": "893fe0d5a4a8568a1122682bb204064e5b3366e7b3ebdd0a8edfbf8162e86a3c",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.NBCompletionMinimum.minimum_eq_completionMinimum",
+      "unchanged": true,
+      "canonical_type_sha256": "d2a599bdfa6febe6f47f59ac1e68f7a51ee024a28efa6ac789fc2086251a71ca",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.NBCompletionMinimum.completion_minimum_attained",
+      "unchanged": true,
+      "canonical_type_sha256": "68cd81aad48355f0150d4f8741b01d4c65d9c36788975bbbfa782e987e92ad61",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.NBCompletionMinimum.completionCost_eq_spectralTotalBudget",
+      "unchanged": true,
+      "canonical_type_sha256": "d3a40211080d9f68ade38a196477a58c204d26ace0384de6e9ba1044224da22d",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.NBCompletionMinimum.minimum_eq_phaseCompletionMinimum_at_peak",
+      "unchanged": true,
+      "canonical_type_sha256": "57ecab46653eda97363720a9ef856e73e0d01d443266d23a74e8dfe434cf5484",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.NBCompletionMinimum.phaseCompletion_minimum_attained_at_peak",
+      "unchanged": true,
+      "canonical_type_sha256": "823f18984156c67cb36889d1d61306a14a5873f25c852b3f3e35762088b97514",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.NBCompletionMinimum.minimum_at_nonsingular_forced_peak",
+      "unchanged": true,
+      "canonical_type_sha256": "3f25892b493202456d9e3ac3b3e0d06fec411f2d5a24d41a913afac0d3b28ece",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.NBFeasibilityClassification.nb_unitary_feasible_iff_symmetric",
+      "unchanged": true,
+      "canonical_type_sha256": "0514e9cb1d6bf17f37f85d983ea15bae7c00983fd49bd9cb78efb3516517a6f5",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.NBFeasibilityClassification.two_state_nb_feasibility",
+      "unchanged": true,
+      "canonical_type_sha256": "c02b1a4e3f94f4948463d3434bad18094468b851bd94bbe29d2ca5e7f028b1a9",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.NBPhaseConstraints.nb_two_state_phase_forced",
+      "unchanged": true,
+      "canonical_type_sha256": "f129e665e201eef74256c795b775b3211f326ffe77a8a0bb30e69b97d948016b",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.NBPeakEfficiency.eq25_nb_peak",
+      "unchanged": true,
+      "canonical_type_sha256": "fe884bcb81db599611336cd6aa385dac937f49203c5cdf91271dde6e243bd318",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.NBPeakEfficiency.nb_contraction_attained",
+      "unchanged": true,
+      "canonical_type_sha256": "2231e8af45c3e3d2a7be32077e3ace7dd0933852c520e83d0f24d7842a819df0",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.BIUnitaryRealizability.bi_unitary_realizable",
+      "unchanged": true,
+      "canonical_type_sha256": "68730154a363f9266d9d2e85c6a29f530aa9ef285103ff43084019a2c2091ca2",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.BIUnitaryRealizability.two_state_bi_feasibility_iff_overlap",
+      "unchanged": true,
+      "canonical_type_sha256": "94cee7635146de5ce0a329b79963d5f0e5b417c6cda2fd46ad631911e6d7bc33",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.phaseSheetBudget",
+      "unchanged": true,
+      "canonical_type_sha256": "9e7256437e5c9d9334cdc459516a2bb8b7422a0c901ad2f21f5fa78d5e4be593",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.OrthogonalSpectralOptimum.fixedPhase_spectral_optimum",
+      "unchanged": true,
+      "canonical_type_sha256": "c3cc33472d3bcad00310e43387a328e51098addd81d5d312bb2634153390542c",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.OrthogonalSpectralPhase.biMinimum_eq_phaseFamily",
+      "unchanged": true,
+      "canonical_type_sha256": "ac3f4952637036c9c4e9b60c16a67e39aaf3af38200fedcfc7858fdc78d41225",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.OrthogonalSpectralPhase.nbMinimum_eq_phaseFamily",
+      "unchanged": true,
+      "canonical_type_sha256": "4577ee8d232cefcd21a09e65a00f04af4b949f5e275b69d7173c1460a160e16e",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.JonesFrameCorrespondence.frameFamily_iff_columns",
+      "unchanged": true,
+      "canonical_type_sha256": "98e33c2f7244c731a66c64e97543247968b268488c027444a6e4b1ecaef0106b",
+      "syntactically_identical_after_namespace_rename": true
+    },
+    {
+      "theorem": "GSTC.Scattering.JonesFrameSpectralMinimum.frame_minima_attained",
+      "unchanged": true,
+      "canonical_type_sha256": "b5f1665f3819e7c69684266b975361e76d454c812904051fe182c1c3987c177f",
+      "syntactically_identical_after_namespace_rename": true
+    }
+  ]
+}
