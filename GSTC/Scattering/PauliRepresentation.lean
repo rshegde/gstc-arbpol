@@ -6,7 +6,6 @@ Authors: Ravi Hegde
 module
 
 public import GSTC.Scattering.JonesOperatorClassification
-
 public import Mathlib.Analysis.Complex.Basic
 public import Mathlib.Analysis.SpecialFunctions.Complex.Arg
 
@@ -56,6 +55,18 @@ theorem pauliSymmetry_iff (q r_x r_y r_z : ℝ) :
 
 @[expose] def coordinates (M : Ten2) : Fin 4 → ℝ :=
   ![(M 0 0).re, (M 0 1).im, (M 0 1).re, (M 0 0).im]
+
+theorem coordinates_pauliForm (q x y z : ℝ) :
+    coordinates (pauliForm q x y z) = ![q, x, y, z] := by
+  ext i
+  fin_cases i <;> simp [coordinates, pauliForm, sigmaX, sigmaY, sigmaZ]
+
+theorem pauliForm_injective {q x y z q' x' y' z' : ℝ}
+    (h : pauliForm q x y z = pauliForm q' x' y' z') :
+    q = q' ∧ x = x' ∧ y = y' ∧ z = z' := by
+  have hc := congrArg coordinates h
+  rw [coordinates_pauliForm, coordinates_pauliForm] at hc
+  exact ⟨congrFun hc 0, congrFun hc 1, congrFun hc 2, congrFun hc 3⟩
 
 theorem norm_det_unitary (X : Ten2) (hX : X ∈ unitary Ten2) : ‖X.det‖ = 1 := by
   have hu : X.conjTranspose * X = 1 := (Unitary.mem_iff.mp hX).1
@@ -110,12 +121,33 @@ theorem coordinates_unit_sphere (M : Ten2) (hM : M ∈ unitary Ten2) :
     Complex.mul_re, coordinates] at hh ⊢
   nlinarith [hh]
 
+theorem unitary_pauli_rep (X : Ten2) (hX : X ∈ unitary Ten2) :
+    ∃ z : ℂ, ∃ q r_x r_y r_z : ℝ,
+      ‖z‖ = 1 ∧ q^2 + r_x^2 + r_y^2 + r_z^2 = 1 ∧
+      z • X = pauliForm q r_x r_y r_z := by
+  obtain ⟨z, hz, hd⟩ := determinant_center X hX
+  have hu := Unitary.smul_mem_of_mem (NBPhaseConstraints.nb_phase_mem_unitary z hz) hX
+  exact ⟨z, _, _, _, _, hz, coordinates_unit_sphere _ hu, special_unitary_pauli _ hu hd⟩
+
 theorem pauli_pairing (q x y z q' x' y' z' : ℝ) :
     ((pauliForm q x y z * (pauliForm q' x' y' z').conjTranspose) 0 0).re =
       q*q' + x*x' + y*y' + z*z' := by
   simp [pauliForm, sigmaX, sigmaY, sigmaZ, Matrix.mul_apply,
     Matrix.conjTranspose_apply, Fin.sum_univ_two]
   ring
+
+theorem pauliForm_special_unitary (q x y z : ℝ)
+    (hs : q^2 + x^2 + y^2 + z^2 = 1) :
+    pauliForm q x y z ∈ unitary Ten2 ∧ (pauliForm q x y z).det = 1 := by
+  constructor
+  · apply Unitary.mem_iff.mpr
+    constructor <;> ext i j <;> fin_cases i <;> fin_cases j <;>
+      apply Complex.ext <;>
+      simp [pauliForm, sigmaX, sigmaY, sigmaZ, Matrix.mul_apply,
+        Fin.sum_univ_two] <;> nlinarith only [hs]
+  · apply Complex.ext <;>
+      simp [Matrix.det_fin_two, pauliForm, sigmaX, sigmaY, sigmaZ] <;>
+      nlinarith only [hs]
 
 end PauliRepresentation
 end GSTC.Scattering

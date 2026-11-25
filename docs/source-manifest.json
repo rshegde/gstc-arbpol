@@ -1,5 +1,5 @@
 {
-  "paper_commit": "f55e79081cd35fd36df7f9bbed87e0acce059beb",
+  "paper_commit": "ad620bd343886022e37cbbcf64f4c115dc93b4d3",
   "roots": [
     "GSTC.Scattering.BIParameterization",
     "GSTC.Scattering.BIInverseCompleteness",
@@ -12,7 +12,12 @@
     "GSTC.Scattering.NBFeasibilityClassification",
     "GSTC.Scattering.BIUnitaryRealizability",
     "GSTC.Scattering.FeasibilityRotation",
-    "GSTC.Scattering.JonesFrameSpectralMinimum"
+    "GSTC.Scattering.JonesFrameSpectralMinimum",
+    "GSTC.Scattering.LinearRotationSpectralMinimum",
+    "GSTC.Scattering.LinearCircularSpectralMinimum",
+    "GSTC.Scattering.UnitaryRotationCapacity",
+    "GSTC.Scattering.RotatedRankOneFrontier",
+    "GSTC.Scattering.RotatedRankOneFamily"
   ],
   "modules": [
     {
@@ -67,9 +72,10 @@
     {
       "module": "GSTC.Scattering.BIFeasibility",
       "source_sha256": "ffc96cc4706a3d2ed15939fc33bc23ad6feaeb3011804779630b6b5d08a1ea11",
-      "public_sha256": "09514bd95bed0d0fee906ecb5470f6a3a3e5c9a2b757347958456e1a5d70c8ae",
-      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
-      "source_module": "LeanEM.EM.Scattering.BIFeasibility"
+      "public_sha256": "72fcee3382f9db1a0cb83b9575fb648398598b4f75d405ea53d1a2f6d266594c",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed. November 25 update restores these original supporting declarations without changing their statements or proofs: zero_params_in_all_classes, biForwardT_zero.",
+      "source_module": "LeanEM.EM.Scattering.BIFeasibility",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74"
     },
     {
       "module": "GSTC.Scattering.BIFrontierCompletion",
@@ -137,9 +143,10 @@
     {
       "module": "GSTC.Scattering.BIScattering",
       "source_sha256": "7edf680e61f8c6bebd83ae85c77fafb1f90683a693b9c98ed65530a7e21bc1da",
-      "public_sha256": "88794725e00695f98bd751d49f6cf3327fd024e1e4a1fb6507783d8574af6f76",
-      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
-      "source_module": "LeanEM.EM.Scattering.BIScattering"
+      "public_sha256": "abcf3221c96e35b1539b4c7ccc5db8044cd188726108422644d3624e93d514c2",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed. November 25 update restores these original supporting declarations without changing their statements or proofs: biZeroParams, biConstitutiveK_zero, bi_cayley_zero.",
+      "source_module": "LeanEM.EM.Scattering.BIScattering",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74"
     },
     {
       "module": "GSTC.Scattering.BIUnitaryRealizability",
@@ -227,24 +234,43 @@
     },
     {
       "module": "GSTC.Scattering.JonesFrameCorrespondence",
+      "source_module": "LeanEM.EM.Scattering.JonesFrameCorrespondence",
       "source_sha256": "fe8fae913163d5a2445e3f2cd60cf8b59b928e4148deccdb6f12fc720de1e6e3",
       "public_sha256": "d43839719d28cac25705beeec78ce4d1f2ab92861dfeb8442a0ed3fd0718eae2",
-      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
-      "source_module": "LeanEM.EM.Scattering.JonesFrameCorrespondence"
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
     },
     {
       "module": "GSTC.Scattering.JonesFrameSpectralMinimum",
+      "source_module": "LeanEM.EM.Scattering.JonesFrameSpectralMinimum",
       "source_sha256": "5690df1bd3141e442b774b0a9755f1c8fbfb0943b3bab477e1b39735b09efcdb",
-      "public_sha256": "e7afb8ecfdbffc2b48bdea7504ec41223f6889703f7474b00745585c98633ffe",
-      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
-      "source_module": "LeanEM.EM.Scattering.JonesFrameSpectralMinimum"
+      "public_sha256": "2bbeb3d0f43b66ded262cf3b4ac1b970d34efde722b205f6a272930f3cd8a972",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
     },
     {
       "module": "GSTC.Scattering.JonesOperatorClassification",
       "source_sha256": "a01d84ef3567944278894df7eb1dde565716eeea989478488ca5498e72f10a3f",
-      "public_sha256": "e371ae89467b28c490d10e2714dbe12811bc81cd760e68f9931954199b440af2",
-      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
-      "source_module": "LeanEM.EM.Scattering.JonesOperatorClassification"
+      "public_sha256": "ded4c2cbbe652c4a5a583d5fbe9043278b8e7a0f18c95f0390f313d99c0159f8",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed. November 25 update restores these original supporting declarations without changing their statements or proofs: jonesInner_smul_self, biForwardT_relative_phase_at_unit_efficiency.",
+      "source_module": "LeanEM.EM.Scattering.JonesOperatorClassification",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74"
+    },
+    {
+      "module": "GSTC.Scattering.LinearCircularSpectralMinimum",
+      "source_module": "LeanEM.EM.Scattering.LinearCircularSpectralMinimum",
+      "source_sha256": "cb97d1ec79438324cf910612923ca413ee3bf9b1c3c164c4dfd78c4c5af97b56",
+      "public_sha256": "667622b5b20712b3d3a4c002b5c7bfd36f6213896adf7e4846541773ae132028",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
+    },
+    {
+      "module": "GSTC.Scattering.LinearRotationSpectralMinimum",
+      "source_module": "LeanEM.EM.Scattering.LinearRotationSpectralMinimum",
+      "source_sha256": "4ab5088ba6c2b85eab45af2eaef61accbc9d785ba282159cb3741d7d88c2b28d",
+      "public_sha256": "e4385ccfce83d5db4b053830492384116402b1c6905a619c8f204f758d80221b",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged. Make the previously transitively available Mathlib arctangent import explicit."
     },
     {
       "module": "GSTC.Scattering.Losslessness",
@@ -277,9 +303,10 @@
     {
       "module": "GSTC.Scattering.Media",
       "source_sha256": "3afcadbeeb5222223103d7054ec9530c9d3439f42aefc7de8d5d9ea7676bebc1",
-      "public_sha256": "1831ff202b2b6c18e98278238110a50f2f655c25e42dc0039615c622134dc5e3",
-      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
-      "source_module": "LeanEM.EM.Scattering.Media"
+      "public_sha256": "f94711c834f39180ab670896b0da45e0fc51d3f7af931beb35b63c14da1f9dee",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed. November 25 update restores these original supporting declarations without changing their statements or proofs: Vacuum.c0_mul_mu0, Vacuum.c0_mul_eps0.",
+      "source_module": "LeanEM.EM.Scattering.Media",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74"
     },
     {
       "module": "GSTC.Scattering.NBCayley",
@@ -443,10 +470,11 @@
     },
     {
       "module": "GSTC.Scattering.PauliRepresentation",
+      "source_module": "LeanEM.EM.Scattering.PauliRepresentation",
       "source_sha256": "dae65d24994b272999a0891ec904b8c2f53c5e69528ebef9e25da1945da4b66a",
-      "public_sha256": "28a64a0ec07e1d45867209f010502c51035080cc87778eb18ce8466f4b581421",
-      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
-      "source_module": "LeanEM.EM.Scattering.PauliRepresentation"
+      "public_sha256": "256a4a36c86c232cff83d167d512bfa7c9a0a16761773b891b569384de0b589a",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
     },
     {
       "module": "GSTC.Scattering.Power",
@@ -468,6 +496,86 @@
       "public_sha256": "8b90a88e08fdca6c2705097386e4686c4667fa1a59044cb2a73d3bfb41588960",
       "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
       "source_module": "LeanEM.EM.Scattering.Reduction"
+    },
+    {
+      "module": "GSTC.Scattering.RotatedRankOneBridge",
+      "source_module": "LeanEM.EM.Scattering.RotatedRankOneBridge",
+      "source_sha256": "b70329144583ae40eca80b4bf59126e61753a436717f4e6d4e0545de53be2bf9",
+      "public_sha256": "6c4538ef2312bb28463f269ab1f82b40c998c72976f805d1b35224d15ab99211",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
+    },
+    {
+      "module": "GSTC.Scattering.RotatedRankOneBudgets",
+      "source_module": "LeanEM.EM.Scattering.RotatedRankOneBudgets",
+      "source_sha256": "3e2f448ebd09a866289dc01f2a99e4e62dfa69ea17ee18e5c77dd6ae14221c1e",
+      "public_sha256": "983690609330de1605c4af9f2347fcc29bc2b1c94f78ba5ab3932bc9e614d838",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
+    },
+    {
+      "module": "GSTC.Scattering.RotatedRankOneFamily",
+      "source_module": "LeanEM.EM.Scattering.RotatedRankOneFamily",
+      "source_sha256": "f3ab229a3984bb0cb2a0f9890957b3ed14843a4c8fd0434a111e88d4d76df737",
+      "public_sha256": "1aae7d0a63e5e61ce86de8224801108cb6966ec5f758d745a61fa7e8ccc8efc3",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
+    },
+    {
+      "module": "GSTC.Scattering.RotatedRankOneFrontier",
+      "source_module": "LeanEM.EM.Scattering.RotatedRankOneFrontier",
+      "source_sha256": "c5ff1defbc7141d32bc1044003146719ea8309ec74df4bbf16b45f5b0cb92562",
+      "public_sha256": "b60d33414d02156a564cb4e39f43f100b35801667cb222e22d6291e0406253cb",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
+    },
+    {
+      "module": "GSTC.Scattering.RotatedRankOneImage",
+      "source_module": "LeanEM.EM.Scattering.RotatedRankOneImage",
+      "source_sha256": "39a4407b9bbf435d5a0fbcdf10506e6f4f31ffa5b7c2496b2ee00107cb47ac22",
+      "public_sha256": "1fde2f8d8204c30d9a9db9054a999411ea37dd66eb81623242047988c2a0e02c",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
+    },
+    {
+      "module": "GSTC.Scattering.RotatedRankOneNorms",
+      "source_module": "LeanEM.EM.Scattering.RotatedRankOneNorms",
+      "source_sha256": "c70aafb3d6f96d0f1d492175e612ae9fcb48a8150d9b5bf0278b3b7ea538bfa4",
+      "public_sha256": "b16e24045ec754d0bc0394ab7ee019401f064ade4dc044d063b436cbb8ad51a0",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
+    },
+    {
+      "module": "GSTC.Scattering.RotatedRankOnePhysicalBlocks",
+      "source_module": "LeanEM.EM.Scattering.RotatedRankOnePhysicalBlocks",
+      "source_sha256": "4f3436b186138a4c8ebfbab0fea7338731c980cb24d484596688faddb2fc806d",
+      "public_sha256": "dc90fb5e07242956d4539f09d660ae2cf5a1d2c6e72cd803cb1f561eec8a7a4e",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
+    },
+    {
+      "module": "GSTC.Scattering.RotatedRankOnePole",
+      "source_module": "LeanEM.EM.Scattering.RotatedRankOnePole",
+      "source_sha256": "cd180f1bdd031037bbeb72d7f478c15c9827bdd4830a838be32bc9386acea466",
+      "public_sha256": "3e826f4e27d0c707afb1dc0f9647a9c805c29c75b30aac032e6e0126e7d2a042",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
+    },
+    {
+      "module": "GSTC.Scattering.RotatedRankOneRecovery",
+      "source_module": "LeanEM.EM.Scattering.RotatedRankOneRecovery",
+      "source_sha256": "5c87e069989b5da3ab758de07835235ef033c6160f4eb4897db19cb1b7837bbb",
+      "public_sha256": "6345c8c6bb2d74c139300a5163c086cd07777dcfd859cc2c8d96266de44f6481",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
+    },
+    {
+      "module": "GSTC.Scattering.RotatedRankOneResources",
+      "source_module": "LeanEM.EM.Scattering.RotatedRankOneResources",
+      "source_sha256": "3f98949688136722fae5d00b6bb152cc7007f93a266169166dbd4ec21f9982b8",
+      "public_sha256": "4a99c6bb362c6146e3758a411ce4413e45509f538ace01f3006a0043b4980755",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
     },
     {
       "module": "GSTC.Scattering.Scattering",
@@ -507,9 +615,10 @@
     {
       "module": "GSTC.Scattering.SusceptibilityBudget",
       "source_sha256": "6a7ee168647cda055bf7f1f053993560391f001af704cb3ef1d12e1abe7e6d2b",
-      "public_sha256": "abaef05aa4d3023e96a5999a2eb1b86d5d7f7d5f71aa018625692eab51ebdf28",
-      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
-      "source_module": "LeanEM.EM.Scattering.SusceptibilityBudget"
+      "public_sha256": "4ea71f8a0cd0c0d635aa3596711db2fdc6ebe4398ee9af5fa3f62d4ec8e01dc4",
+      "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed. November 25 update restores these original supporting declarations without changing their statements or proofs: blocks_smul, spectralCosts_smul, spectralBudgets_smul, spectralTotalBudget_eq_zero_iff.",
+      "source_module": "LeanEM.EM.Scattering.SusceptibilityBudget",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74"
     },
     {
       "module": "GSTC.Scattering.SusceptibilityBudgetPolynomials",
@@ -531,6 +640,14 @@
       "public_sha256": "ac6b277465a121e372ef87db6cd4c98966beea5b3b2a421bee6537903b782da4",
       "adaptation": "Verbatim source copy. Retain paper-proof dependencies and rename public namespace to GSTC. Remove obsolete comments and redundant imports; consolidate duplicate conjugation helpers where needed.",
       "source_module": "LeanEM.EM.Scattering.Unitarity"
+    },
+    {
+      "module": "GSTC.Scattering.UnitaryRotationCapacity",
+      "source_module": "LeanEM.EM.Scattering.UnitaryRotationCapacity",
+      "source_sha256": "d29b302839d3fb743b6a756c9530738d28ce615bc024dd7f45b2eedf39de046a",
+      "public_sha256": "8d76ee1567e3b4b57a8fe83b60ae3b1e88b2c284fa4de3a0a786e20ed26f8551",
+      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
     }
   ],
   "paper_theorems": [
@@ -586,8 +703,36 @@
     "GSTC.Scattering.OrthogonalSpectralPhase.biMinimum_eq_phaseFamily",
     "GSTC.Scattering.OrthogonalSpectralPhase.nbMinimum_eq_phaseFamily",
     "GSTC.Scattering.JonesFrameCorrespondence.frameFamily_iff_columns",
-    "GSTC.Scattering.JonesFrameSpectralMinimum.frame_minima_attained"
+    "GSTC.Scattering.JonesFrameSpectralMinimum.frame_minima_attained",
+    "GSTC.Scattering.LinearRotationSpectralMinimum.biMinimum_linearRotation",
+    "GSTC.Scattering.LinearRotationSpectralMinimum.nbMinimum_linearRotation",
+    "GSTC.Scattering.LinearRotationSpectralMinimum.rotationBudget_le",
+    "GSTC.Scattering.LinearRotationSpectralMinimum.rotationBudget_eq_optimum",
+    "GSTC.Scattering.LinearCircularSpectralMinimum.biMinimum_linearCircular",
+    "GSTC.Scattering.LinearCircularSpectralMinimum.nbMinimum_linearCircular",
+    "GSTC.Scattering.LinearCircularSpectralMinimum.bi_eq_nb_minimum_linearCircular",
+    "GSTC.Scattering.UnitaryRotationCapacity.rotation_material_minimum",
+    "GSTC.Scattering.UnitaryRotationCapacity.rotation_budget_lower_bound",
+    "GSTC.Scattering.UnitaryRotationCapacity.rotation_budget_monotone",
+    "GSTC.Scattering.UnitaryRotationCapacity.rotation_capacity",
+    "GSTC.Scattering.UnitaryRotationCapacity.rotation_orthonormal_minimum_le",
+    "GSTC.Scattering.UnitaryRotationCapacity.rotation_degenerate_minimum_zero",
+    "GSTC.Scattering.RotatedRankOneRecovery.recovered_spectral_budgets",
+    "GSTC.Scattering.RotatedRankOneRecovery.every_completion_spectral_budgets",
+    "GSTC.Scattering.RotatedRankOneRecovery.exact_physical_resource_image",
+    "GSTC.Scattering.RotatedRankOneRecovery.admissible_completion_in_family",
+    "GSTC.Scattering.RotatedRankOneRecovery.complete_family_physical_resources",
+    "GSTC.Scattering.RotatedRankOneRecovery.supplement_parameters",
+    "GSTC.Scattering.RotatedRankOneRecovery.centeredArc_direct",
+    "GSTC.Scattering.RotatedRankOneRecovery.centeredArc_coupling",
+    "GSTC.Scattering.RotatedRankOneRecovery.dominance_pos_direct",
+    "GSTC.Scattering.RotatedRankOneRecovery.dominance_pos_coupling",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotDirect_gt_two_negF",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotM_le_two_iff",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotM_le_two_of_s",
+    "GSTC.Scattering.RotatedRankOneRecovery.centeredArc_pareto_optimal"
   ],
-  "minimality": "Source-command closure of the listed paper theorem roots, including elaboration support; no claim of shortest possible alternative proofs.",
-  "proof_dependency_source_commands": 1228
+  "minimality": "Initial source-command closure, extended by the listed paper-specific application/frontier modules and their support. New modules retain their mathematical declarations; no claim of declaration-level minimality for the update or shortest alternative proofs.",
+  "update_source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
+  "initial_proof_dependency_source_commands": 1228
 }

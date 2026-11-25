@@ -479,6 +479,34 @@ theorem biForwardT_unitary_of_two_unit_efficiencies (cfg : Config) (p : BIParams
     fun w => reflectionless_transmission_is_isometry cfg p hk heq w hR
   exact ⟨hR, jonesUnitary_of_pairing (fun u v => jonesInner_of_norm_preserving hiso u v)⟩
 
+theorem jonesInner_smul_self (c : ℂ) (u : Vec2) :
+    jonesInner (c • u) (c • u) = star c * c * jonesInner u u := by
+  simp only [jonesInner, Pi.smul_apply, smul_eq_mul, star_mul]
+  ring
+
+theorem biForwardT_relative_phase_at_unit_efficiency (cfg : Config) (p : BIParams)
+    (hk : cfg.kPar = 0) (heq : cfg.lower.eta = cfg.upper.eta)
+    (u₁ u₂ v₁ v₂ : Vec2)
+    (hu₁ : isNormalized u₁) (hu₂ : isNormalized u₂)
+    (hv₁ : isNormalized v₁) (hv₂ : isNormalized v₂)
+    (hind : JonesIndependent u₁ u₂)
+    (α₁ α₂ : ℂ)
+    (ht₁ : biForwardT cfg p *ᵥ u₁ = α₁ • v₁)
+    (ht₂ : biForwardT cfg p *ᵥ u₂ = α₂ • v₂)
+    (he₁ : efficiency α₁ = 1) (he₂ : efficiency α₂ = 1) :
+    star α₁ * α₂ * jonesInner v₁ v₂ = jonesInner u₁ u₂ := by
+  obtain ⟨hR, _⟩ :=
+    biForwardT_unitary_of_two_unit_efficiencies cfg p hk heq u₁ u₂ v₁ v₂
+      hu₁ hu₂ hv₁ hv₂ hind α₁ α₂ ht₁ ht₂ he₁ he₂
+  have hiso : ∀ w : Vec2, jonesNormSqR (biForwardT cfg p *ᵥ w) = jonesNormSqR w :=
+    fun w => reflectionless_transmission_is_isometry cfg p hk heq w hR
+  have hpair := jonesInner_of_norm_preserving hiso u₁ u₂
+  rw [ht₁, ht₂] at hpair
+  calc star α₁ * α₂ * jonesInner v₁ v₂ = jonesInner (α₁ • v₁) (α₂ • v₂) := by
+        simp only [jonesInner, Pi.smul_apply, smul_eq_mul, star_mul]
+        ring
+    _ = jonesInner u₁ u₂ := hpair
+
 end JonesOperatorClassification
 
 end GSTC.Scattering

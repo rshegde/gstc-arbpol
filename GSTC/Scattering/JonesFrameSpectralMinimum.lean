@@ -6,6 +6,7 @@ Authors: Ravi Hegde
 module
 
 public import GSTC.Scattering.JonesFrameCorrespondence
+public import GSTC.Scattering.ClassMinimumBudget
 
 public section
 set_option autoImplicit false

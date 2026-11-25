@@ -17,10 +17,15 @@ The canonical budget is `B = k₀ max(‖A‖₂, ‖D‖₂, ‖G‖₂)`, usin
 - Attainment of class minima, closed feasible-cap rays, BI/NB comparison, and simultaneous-rotation covariance.
 - BI and NB completion-space/material-space minimum equivalence.
 - Attained nondegenerate NB peak efficiency and unitary orthonormal-frame spectral minima, including Jones-frame correspondence.
+- Sharp linear-rotation and linear-to-circular spectral material minima, with finite-sheet attainment.
+- Sharp unitary-rotation material budget for nonorthogonal input pairs, angle monotonicity, half-wave capacity, and explicit orthonormal/degenerate-task caveats.
+- Rotated rank-one separation: completion completeness on the prescribed transmission fiber, finite-sheet recovery, exact physical spectral-resource image, and centered-arc Pareto optimality when `m ≤ 2`.
 
 See [the theorem map](docs/THEOREMS.md) for entry points and scope limits, and [the extraction plan](docs/EXTRACTION.md) for the publication boundary. No distributional, Maxwell-to-GSTC, multipolar, or archived componentwise-minimum library is included. Electric-only/magnetic-only support identities and older coarse parameter-cap predicates remain dependencies of some feasibility proofs; the paper-facing minima use BI/NB and the spectral budget above.
 
-The public namespace and library are **`GSTC`**. This is a standalone extraction: it has no dependency on the original LeanEM repository or its private history. The [manifest](docs/source-manifest.json) lists the 53 paper-facing theorem roots, original source hashes, and exported hashes. Supporting declarations are retained only for those proofs and their elaboration; obsolete narratives, examples, unrelated theorems, duplicate helpers, and redundant imports have been removed.
+The public namespace and library are **`GSTC`**. This is a standalone extraction: it has no dependency on the original LeanEM repository or its private history. The [manifest](docs/source-manifest.json) lists the 80 paper-facing theorem roots, original source hashes, and exported hashes. The initial extraction retains the proof/type dependency closure and elaboration support. The November 25 update adds the corresponding paper-specific application and frontier modules, including their mathematical support declarations. See the extraction notes for the precise boundary.
+
+The November 25 update uses source snapshot `96b0e2f` and manuscript snapshot `ad620bd`. The S6 scalar-minimum formula, right-angle noncentered optimum, phase-global USD certificate, and algebraicity of general minimum endpoints remain outside this release's verified claims. The S6 Pareto theorem concerns the complete prescribed rotated transmission family; it does not supply the separate general BI peak-efficiency classification.
 
 ## Reproduce
 
