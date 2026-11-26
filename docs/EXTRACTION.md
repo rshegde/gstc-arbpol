@@ -70,6 +70,40 @@ placeholders. All checks ran through the resource-limited wrapper, one job at
 a time. The build used the pinned, prebuilt Mathlib cache; no LeanEM library
 artifact is on the companion's import path. `git diff --check` passed.
 
+## November 26 completed S6 scalar-minimum update
+
+This extension is pinned to source commit `2621eeb`. It adds
+`RotatedRankOneScalarMin` and `RotatedRankOneRightAngle`, and refreshes
+`RotatedRankOneFrontier` to include the denominator-sign case split used by
+the new consumers. The mathematical definitions, hypotheses and proofs are
+copied unchanged, with the same namespace/comment/whitespace adaptations.
+Per-module hashes and source commits identify the mixed extraction snapshots.
+
+The proved endpoints include the centered arc's unique minimizer, its global
+sharpness when its value is at most two, the aligned specialization, the two
+rotated resource inequalities, the right-angle noncentered candidate and
+lower bound, and attainment of both candidates inside `physicalResourceImage`.
+This supersedes the November 25 exclusion of the scalar-minimum development.
+The general BI peak/task-to-family bridge and S5 phase-global USD certificate
+remain separate; the rotated `b=0` case has an additional phase and is not
+claimed by these theorems.
+
+The source regression is exported as `Regression/RotatedRankOneScalarMin.lean`.
+It includes the exact worked example and strict radical comparison, alongside
+25 axiom-print checks. The source audit checks its hash and import/hygiene
+boundary, and requires that `scripts/verify.sh` runs it. The main audit checks
+103 selected theorem roots and all imported companion theorems.
+
+Validation of the November 26 export: the full library build passed (3,163
+Lake jobs); the S6 regression elaborated with all 25 axiom checks; the main
+audit checked 1,973 companion theorems against the standard allowlist and
+found all 103 selected theorem roots. The source audit passed for 88 modules
+and the regression source. Fault injection confirmed that both a changed
+regression hash and a proof placeholder with a matching hash are rejected;
+the exact original files were restored and the source audit passed again.
+All verification ran sequentially through `scripts/run_restricted.sh`.
+`git diff --check` passed.
+
 ## History and publication
 
 The companion is initialized as a new repository, rather than exposing a branch or fork containing LeanEM ancestors. Only the allowlisted companion source, license, manifests, documentation, and verification scripts enter its initial commit. Dependency caches, build artifacts, and local execution logs are ignored.

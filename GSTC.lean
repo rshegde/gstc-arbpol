@@ -17,3 +17,5 @@ public import GSTC.Scattering.LinearCircularSpectralMinimum
 public import GSTC.Scattering.UnitaryRotationCapacity
 public import GSTC.Scattering.RotatedRankOneFrontier
 public import GSTC.Scattering.RotatedRankOneFamily
+public import GSTC.Scattering.RotatedRankOneScalarMin
+public import GSTC.Scattering.RotatedRankOneRightAngle

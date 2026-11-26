@@ -26,6 +26,17 @@ def rotPosDenominator (s c x : ℝ) : Prop := 0 < rotF s c x (Real.sqrt (1 - x ^
 
 def rotNegDenominator (s c x : ℝ) : Prop := rotF s c x (Real.sqrt (1 - x ^ 2)) < 0
 
+theorem rotDenominator_cases (s c x : ℝ)
+    (hne : rotF s c x (Real.sqrt (1 - x ^ 2)) ≠ 0) :
+    rotPosDenominator s c x ∨ rotNegDenominator s c x := by
+  rcases lt_or_gt_of_ne hne with hlt | hgt
+  · right
+    show rotF s c x (Real.sqrt (1 - x ^ 2)) < 0
+    exact hlt
+  · left
+    show 0 < rotF s c x (Real.sqrt (1 - x ^ 2))
+    exact hgt
+
 structure ResourcePair where
   direct : ℝ
   coupling : ℝ

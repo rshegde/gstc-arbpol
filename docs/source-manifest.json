@@ -17,7 +17,9 @@
     "GSTC.Scattering.LinearCircularSpectralMinimum",
     "GSTC.Scattering.UnitaryRotationCapacity",
     "GSTC.Scattering.RotatedRankOneFrontier",
-    "GSTC.Scattering.RotatedRankOneFamily"
+    "GSTC.Scattering.RotatedRankOneFamily",
+    "GSTC.Scattering.RotatedRankOneScalarMin",
+    "GSTC.Scattering.RotatedRankOneRightAngle"
   ],
   "modules": [
     {
@@ -524,10 +526,10 @@
     {
       "module": "GSTC.Scattering.RotatedRankOneFrontier",
       "source_module": "LeanEM.EM.Scattering.RotatedRankOneFrontier",
-      "source_sha256": "c5ff1defbc7141d32bc1044003146719ea8309ec74df4bbf16b45f5b0cb92562",
-      "public_sha256": "b60d33414d02156a564cb4e39f43f100b35801667cb222e22d6291e0406253cb",
-      "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
-      "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
+      "source_commit": "2621eebeeba540661a4822912b5f33a9b5b8db52",
+      "source_sha256": "1e0762ee9c34ac322337d26d2161f7195a5f5483ac279b33c394b7b98c381878",
+      "public_sha256": "4e0dba1e8ca71fdbaab33c6f7c53cd810ae0deec6f3249928b84d072b1094f13",
+      "adaptation": "Copy the completed S6 module from the pinned source snapshot; rename LeanEM.EM to GSTC, retain copyright/license comments and normalize whitespace. Definitions, hypotheses and proofs are unchanged."
     },
     {
       "module": "GSTC.Scattering.RotatedRankOneImage",
@@ -576,6 +578,22 @@
       "public_sha256": "4a99c6bb362c6146e3758a411ce4413e45509f538ace01f3006a0043b4980755",
       "source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
       "adaptation": "Copy the paper-specific module and its proof support from the pinned update snapshot; rename LeanEM.EM to GSTC and retain only the copyright/license comments. Mathematical definitions, hypotheses and proofs are unchanged."
+    },
+    {
+      "module": "GSTC.Scattering.RotatedRankOneRightAngle",
+      "source_module": "LeanEM.EM.Scattering.RotatedRankOneRightAngle",
+      "source_commit": "2621eebeeba540661a4822912b5f33a9b5b8db52",
+      "source_sha256": "39cd65d826339b9daad1fba4e700faca33de1b7a28ef1f3dba612a69262977ee",
+      "public_sha256": "4c75b17c403e46c25b6f7d1d1e9faae2c3a0e5b97c2f8f5827c8e2e9f58f92b9",
+      "adaptation": "Copy the completed S6 module from the pinned source snapshot; rename LeanEM.EM to GSTC, retain copyright/license comments and normalize whitespace. Definitions, hypotheses and proofs are unchanged."
+    },
+    {
+      "module": "GSTC.Scattering.RotatedRankOneScalarMin",
+      "source_module": "LeanEM.EM.Scattering.RotatedRankOneScalarMin",
+      "source_commit": "2621eebeeba540661a4822912b5f33a9b5b8db52",
+      "source_sha256": "d66b24215df7c12c17b333c7d56d25a8d615ca6151bd4e50b220cb00f8fe4b2d",
+      "public_sha256": "2120adc3b2345baaffd2373fe1f4c245232165724f81833fa1992a7f9f80fcda",
+      "adaptation": "Copy the completed S6 module from the pinned source snapshot; rename LeanEM.EM to GSTC, retain copyright/license comments and normalize whitespace. Definitions, hypotheses and proofs are unchanged."
     },
     {
       "module": "GSTC.Scattering.Scattering",
@@ -730,9 +748,42 @@
     "GSTC.Scattering.RotatedRankOneRecovery.rotDirect_gt_two_negF",
     "GSTC.Scattering.RotatedRankOneRecovery.rotM_le_two_iff",
     "GSTC.Scattering.RotatedRankOneRecovery.rotM_le_two_of_s",
-    "GSTC.Scattering.RotatedRankOneRecovery.centeredArc_pareto_optimal"
+    "GSTC.Scattering.RotatedRankOneRecovery.centeredArc_pareto_optimal",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotSharpMin_radical_nonneg",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotSharpMin_eq_h",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotSharpMin_quadratic",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotSharpMin_bounds",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotSharpMin_crossing",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotSharpMin_arg_mem",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotSharpMin_le_arc",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotSharpMin_attained",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotSharpMin_unique",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotSharpMin_le_two_of_m_le_two",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotSharpMin_global_lower",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotSharpMin_image_lower",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotSharpMin_aligned",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotU_abs_ge_w",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotDirect_sq_ge_p1_w",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotDirect_sq_add_coupling_sq",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotRightAngle_pair",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotRightAngle_negF_dominated",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotRightAngle_min",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotRightAngle_min_attained",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotSharpMin_image_attained",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotRightAngle_image_lower",
+    "GSTC.Scattering.RotatedRankOneRecovery.rotRightAngle_image_attained"
   ],
   "minimality": "Initial source-command closure, extended by the listed paper-specific application/frontier modules and their support. New modules retain their mathematical declarations; no claim of declaration-level minimality for the update or shortest alternative proofs.",
   "update_source_commit": "96b0e2f659040aabad492549acb32b3581ad6f74",
-  "initial_proof_dependency_source_commands": 1228
+  "initial_proof_dependency_source_commands": 1228,
+  "regressions": [
+    {
+      "path": "Regression/RotatedRankOneScalarMin.lean",
+      "source_path": "docs/audits/rotated_rank_one_scalar_min_regression.lean",
+      "source_commit": "2621eebeeba540661a4822912b5f33a9b5b8db52",
+      "source_sha256": "30cd4d9bf71709c605dc412e1bd1e63abb54d3b51187656e115558c3fb345987",
+      "public_sha256": "a7ea722b403bfba8166ab96c796710d9640b6a65e47312f22374beb6231ea26b"
+    }
+  ],
+  "s6_source_commit": "2621eebeeba540661a4822912b5f33a9b5b8db52"
 }
