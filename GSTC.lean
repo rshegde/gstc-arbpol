@@ -12,3 +12,10 @@ public import GSTC.Scattering.NBFeasibilityClassification
 public import GSTC.Scattering.BIUnitaryRealizability
 public import GSTC.Scattering.FeasibilityRotation
 public import GSTC.Scattering.JonesFrameSpectralMinimum
+public import GSTC.Scattering.LinearRotationSpectralMinimum
+public import GSTC.Scattering.LinearCircularSpectralMinimum
+public import GSTC.Scattering.UnitaryRotationCapacity
+public import GSTC.Scattering.RotatedRankOneFrontier
+public import GSTC.Scattering.RotatedRankOneFamily
+public import GSTC.Scattering.RotatedRankOneScalarMin
+public import GSTC.Scattering.RotatedRankOneRightAngle

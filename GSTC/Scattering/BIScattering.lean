@@ -803,6 +803,21 @@ theorem bi_boundary_det_ne_zero (cfg : Config) (p : BIParams)
   apply biBoundaryA_det_ne_zero cfg p hk heq
   simp only [biBoundaryA, Matrix.det_mul, hz, zero_mul]
 
+@[expose] def biZeroParams : BIParams := ⟨0,0,0,0,0,0,0,0,0,0⟩
+
+theorem biConstitutiveK_zero (cfg : Config) : biConstitutiveK cfg biZeroParams = 0 := by
+  have hH : biConstitutiveH cfg biZeroParams = 0 := by
+    ext i j
+    fin_cases i <;> fin_cases j <;> simp [biConstitutiveH, biZeroParams]
+  simp only [biConstitutiveK, hH, Matrix.mul_zero, Matrix.zero_mul, smul_zero]
+
+theorem bi_cayley_zero (cfg : Config) : cayley4 (biConstitutiveK cfg biZeroParams) = 1 := by
+  rw [biConstitutiveK_zero]
+  have hd : IsUnit ((2 • (1 : Matrix (Fin 4) (Fin 4) ℂ)).det) := by
+    simpa using hermitian_cayley4_den_isUnit 0 (by simp)
+  simp only [cayley4, smul_zero, sub_zero, add_zero]
+  exact Matrix.nonsing_inv_mul _ hd
+
 end ConstitutiveCayley
 
 end GSTC.Scattering

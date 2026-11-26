@@ -60,4 +60,15 @@ assert seen == set(files), 'Unreachable extra source in companion'
 root_imports = re.findall(r'^public import ([\w.]+)', (root/'GSTC.lean').read_text(), re.M)
 assert root_imports == manifest['roots'], 'Root import/manifest mismatch'
 assert (root/'lean-toolchain').read_text().strip() == 'leanprover/lean4:v4.35.0'
+for entry in manifest.get('regressions', []):
+    path = root / entry['path']
+    assert (root / 'Regression').resolve() in path.resolve().parents, entry['path']
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == entry['public_sha256'], entry['path']
+    text = code_only(path.read_text())
+    assert 'LeanEM' not in text, entry['path']
+    assert not re.search(r'\b(sorry|admit|axiom)\b', text), entry['path']
+    for imported in re.findall(r'^(?:public\s+|private\s+)?import\s+([\w.]+)', text, re.M):
+        assert imported.startswith('Mathlib.') or imported in files, (entry['path'], imported)
+    assert f"lake env lean {entry['path']}" in (root / 'scripts/verify.sh').read_text(), entry['path']
 print(f'PASS: {len(files)} dependency-reachable modules; manifest hashes match; no private imports, legacy modules, axioms, or proof placeholders.')
+print(f"PASS: {len(manifest.get('regressions', []))} regression files have matching hashes, clean imports, and verification-script coverage.")

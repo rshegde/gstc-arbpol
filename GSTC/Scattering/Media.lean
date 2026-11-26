@@ -108,4 +108,54 @@ inductive Wave where
 @[expose] noncomputable def hPar (cfg : Config) (s : Side) (w : Wave) (e : Vec2) : Vec2 :=
   ((PropDir.sign (Wave.dir s w) : ℂ)) • ((ncross * waveY (Wave.medium cfg s w) cfg.kPar) *ᵥ e)
 
+theorem Vacuum.c0_mul_mu0 (v : Vacuum) : v.c0 * v.mu0 = v.eta0 := by
+  have heps : v.eps0 ≠ 0 := ne_of_gt v.eps0_pos
+  have h3 : v.c0 ^ 2 * v.mu0 * v.eps0 = 1 := by nlinarith [v.h_c]
+  have h2 : v.c0 ^ 2 * v.mu0 = 1 / v.eps0 := by
+    have hh : v.c0 ^ 2 * v.mu0 = (v.c0 ^ 2 * v.mu0 * v.eps0) / v.eps0 := by field_simp
+    rw [hh, h3]
+  have hm : v.mu0 = v.eta0 ^ 2 * v.eps0 := v.h_eta.symm
+  have h4 : v.c0 ^ 2 * v.mu0 ^ 2 = v.eta0 ^ 2 := by
+    have h5 : v.c0 ^ 2 * v.mu0 ^ 2 = v.mu0 * (v.c0 ^ 2 * v.mu0) := by ring
+    have h6 : v.mu0 * (v.c0 ^ 2 * v.mu0) = v.mu0 * (1 / v.eps0) := by rw [h2]
+    have h7 : v.mu0 * (1 / v.eps0) = v.mu0 / v.eps0 := by ring
+    have h8 : v.mu0 / v.eps0 = (v.eta0 ^ 2 * v.eps0) / v.eps0 := by rw [hm]
+    have h9 : (v.eta0 ^ 2 * v.eps0) / v.eps0 = v.eta0 ^ 2 := by field_simp
+    exact h5.trans (h6.trans (h7.trans (h8.trans h9)))
+  have h10 : (v.c0 * v.mu0) ^ 2 = (v.eta0) ^ 2 := by
+    have hh : (v.c0 * v.mu0) ^ 2 = v.c0 ^ 2 * v.mu0 ^ 2 := by
+      simp only [pow_two]
+      ring
+    rw [hh]
+    exact h4
+  nlinarith [h10, mul_pos v.c0_pos v.mu0_pos, v.eta0_pos]
+
+theorem Vacuum.c0_mul_eps0 (v : Vacuum) : v.c0 * v.eps0 = 1 / v.eta0 := by
+  have hmu : v.mu0 ≠ 0 := ne_of_gt v.mu0_pos
+  have heps : v.eps0 ≠ 0 := ne_of_gt v.eps0_pos
+  have h2 : v.c0 ^ 2 * v.eps0 = 1 / v.mu0 := by
+    have hh : v.c0 ^ 2 * v.eps0 = (v.c0 ^ 2 * v.eps0 * v.mu0) / v.mu0 := by field_simp
+    rw [hh, v.h_c]
+  have hm : v.mu0 = v.eta0 ^ 2 * v.eps0 := v.h_eta.symm
+  have h4 : v.c0 ^ 2 * v.eps0 ^ 2 = v.eps0 / v.mu0 := by
+    have h5 : v.c0 ^ 2 * v.eps0 ^ 2 = v.eps0 * (v.c0 ^ 2 * v.eps0) := by ring
+    have h6 : v.eps0 * (v.c0 ^ 2 * v.eps0) = v.eps0 * (1 / v.mu0) := by rw [h2]
+    have h7 : v.eps0 * (1 / v.mu0) = v.eps0 / v.mu0 := by ring
+    exact h5.trans (h6.trans h7)
+  have h8 : v.eps0 / v.mu0 = 1 / (v.eta0 ^ 2) := by
+    have hh : v.eps0 / v.mu0 = v.eps0 / (v.eta0 ^ 2 * v.eps0) := by rw [hm]
+    rw [hh]
+    field_simp
+  have h10 : (v.c0 * v.eps0 * v.eta0) ^ 2 = 1 := by
+    have hh : (v.c0 * v.eps0 * v.eta0) ^ 2 = v.c0 ^ 2 * v.eps0 ^ 2 * v.eta0 ^ 2 := by
+      simp only [pow_two]
+      ring
+    rw [hh, h4, h8]
+    field_simp [ne_of_gt v.eta0_pos]
+  have h11 : v.c0 * v.eps0 * v.eta0 = 1 := by
+    nlinarith [h10, mul_pos (mul_pos v.c0_pos v.eps0_pos) v.eta0_pos]
+  have h12 : v.c0 * v.eps0 = (v.c0 * v.eps0 * v.eta0) / v.eta0 := by
+    field_simp [ne_of_gt v.eta0_pos]
+  rw [h12, h11]
+
 end GSTC.Scattering

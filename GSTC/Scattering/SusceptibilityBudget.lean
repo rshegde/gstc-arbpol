@@ -313,4 +313,46 @@ theorem spectralBudget_minOn_closed (cfg : Config) (hk : 0 < freeSpaceK0 cfg)
   · exact hmin ⟨hb,hy⟩
   · exact hx.1.trans (le_of_lt (lt_of_not_ge hb))
 
+theorem blocks_smul (c : ℝ) (x : MaterialCoordinates) :
+    electricBlock (c • x) = c • electricBlock x ∧
+    magneticBlock (c • x) = c • magneticBlock x ∧
+    couplingBlock (c • x) = c • couplingBlock x := by
+  refine ⟨?_,?_,?_⟩ <;> ext i j <;> fin_cases i <;> fin_cases j <;> rfl
+
+theorem spectralCosts_smul (c : ℝ) (hc : 0 ≤ c) (x : MaterialCoordinates) :
+    spectralDirectCost (c • x) = c * spectralDirectCost x ∧
+    spectralCouplingCost (c • x) = c * spectralCouplingCost x ∧
+    spectralCost (c • x) = c * spectralCost x := by
+  have hd : spectralDirectCost (c • x) = c * spectralDirectCost x := by
+    simp only [spectralDirectCost, (blocks_smul c x).1, (blocks_smul c x).2.1,
+      opNorm_smul, abs_of_nonneg hc]
+    exact (mul_max_of_nonneg _ _ hc).symm
+  have hg : spectralCouplingCost (c • x) = c * spectralCouplingCost x := by
+    simp only [spectralCouplingCost, (blocks_smul c x).2.2, opNorm_smul, abs_of_nonneg hc]
+  refine ⟨hd,hg,?_⟩
+  simp only [spectralCost, hd, hg]
+  exact (mul_max_of_nonneg _ _ hc).symm
+
+theorem spectralBudgets_smul (cfg : Config) (c : ℝ) (hc : 0 ≤ c) (x : MaterialCoordinates) :
+    spectralDirectBudget cfg (c • x) = c * spectralDirectBudget cfg x ∧
+    spectralCouplingBudget cfg (c • x) = c * spectralCouplingBudget cfg x ∧
+    spectralTotalBudget cfg (c • x) = c * spectralTotalBudget cfg x := by
+  have hh := spectralCosts_smul c hc x
+  simp only [spectralDirectBudget, spectralCouplingBudget, spectralTotalBudget_eq,
+    hh.1, hh.2.1, hh.2.2]
+  constructor
+  · ring
+  constructor <;> ring
+
+theorem spectralTotalBudget_eq_zero_iff (cfg : Config) (hk : 0 < freeSpaceK0 cfg)
+    (x : MaterialCoordinates) : spectralTotalBudget cfg x = 0 ↔ x = 0 := by
+  constructor
+  · intro h
+    funext k
+    have hh := coordinate_bound cfg hk x 0 h.le k
+    simpa using abs_eq_zero.mp (le_antisymm (by simpa using hh) (abs_nonneg _))
+  · rintro rfl
+    have hh := (spectralBudgets_smul cfg 0 (by norm_num) (0 : MaterialCoordinates)).2.2
+    simpa using hh
+
 end GSTC.Scattering.SusceptibilityBudget

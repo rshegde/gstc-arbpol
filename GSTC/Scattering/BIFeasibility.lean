@@ -62,6 +62,21 @@ structure Budget where
   !![(biPowerResponse4 cfg p) 2 0, (biPowerResponse4 cfg p) 2 1;
      (biPowerResponse4 cfg p) 3 0, (biPowerResponse4 cfg p) 3 1]
 
+theorem zero_params_in_all_classes (c : SheetClass) : InClass c biZeroParams := by
+  rcases c with _ | _ | _
+  · simp [InClass, ElectricOnly, biZeroParams]
+  · simp [InClass, NoCoupling, biZeroParams]
+  · simp [InClass]
+
+theorem biForwardT_zero (cfg : Config) : biForwardT cfg biZeroParams = 1 := by
+  have hC := bi_cayley_zero cfg
+  have hR : biPowerResponse4 cfg biZeroParams = parityExchange := by
+    unfold biPowerResponse4
+    rw [hC, Matrix.mul_one]
+  ext i j
+  fin_cases i <;> fin_cases j <;>
+    simp [biForwardT, hR, parityExchange]
+
 end BIFeasibility
 
 end GSTC.Scattering

@@ -17,10 +17,16 @@ The canonical budget is `B = k₀ max(‖A‖₂, ‖D‖₂, ‖G‖₂)`, usin
 - Attainment of class minima, closed feasible-cap rays, BI/NB comparison, and simultaneous-rotation covariance.
 - BI and NB completion-space/material-space minimum equivalence.
 - Attained nondegenerate NB peak efficiency and unitary orthonormal-frame spectral minima, including Jones-frame correspondence.
+- Sharp linear-rotation and linear-to-circular spectral material minima, with finite-sheet attainment.
+- Sharp unitary-rotation material budget for nonorthogonal input pairs, angle monotonicity, half-wave capacity, and explicit orthonormal/degenerate-task caveats.
+- Rotated rank-one separation: completion completeness on the prescribed transmission fiber, finite-sheet recovery, exact physical spectral-resource image, and centered-arc Pareto optimality when `m ≤ 2`.
+- S6 centered scalar minimum with its unique minimizer, global sharpness when the centered value is at most two, the right-angle noncentered branch, and physical-image attainment of both candidates. The regression includes the exact counterexample to universal phase centering.
 
 See [the theorem map](docs/THEOREMS.md) for entry points and scope limits, and [the extraction plan](docs/EXTRACTION.md) for the publication boundary. No distributional, Maxwell-to-GSTC, multipolar, or archived componentwise-minimum library is included. Electric-only/magnetic-only support identities and older coarse parameter-cap predicates remain dependencies of some feasibility proofs; the paper-facing minima use BI/NB and the spectral budget above.
 
-The public namespace and library are **`GSTC`**. This is a standalone extraction: it has no dependency on the original LeanEM repository or its private history. The [manifest](docs/source-manifest.json) lists the 53 paper-facing theorem roots, original source hashes, and exported hashes. Supporting declarations are retained only for those proofs and their elaboration; obsolete narratives, examples, unrelated theorems, duplicate helpers, and redundant imports have been removed.
+The public namespace and library are **`GSTC`**. This is a standalone extraction: it has no dependency on the original LeanEM repository or its private history. The [manifest](docs/source-manifest.json) lists the 103 paper-facing theorem roots, original source hashes, and exported hashes. The initial extraction retains the proof/type dependency closure and elaboration support. The November 25 update adds the corresponding paper-specific application and frontier modules, including their mathematical support declarations. See the extraction notes for the precise boundary.
+
+The application/frontier update uses source snapshot `96b0e2f`; the completed November 26 S6 scalar-minimum update uses `2621eeb`. Both refer to manuscript snapshot `ad620bd`. S6 minima are proved over the exact physical resource image of the prescribed rotated family, under the stated physical parameter and matched-vacuum impedance hypotheses. They do not supply the separate general BI peak/task-to-family classification. The phase-global USD certificate in S5, rotated `b = 0` tasks with an additional free transmission phase, and algebraicity of general minimum endpoints remain outside this release's verified claims.
 
 ## Reproduce
 
