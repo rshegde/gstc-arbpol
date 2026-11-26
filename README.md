@@ -1,6 +1,6 @@
 # gstc-arbpol
 
-Lean 4 proofs accompanying the [arbitrary-polarization GSTC paper](https://github.com/rshegde/paper-gstc_arbpol_bounds).
+Lean 4 proofs accompanying the paper **Minimum Effective-Susceptibility Bounds for Arbitrary Polarization Transformations in Metasurfaces** ([arXiv:2611.34146](https://arxiv.org/abs/2611.34146)).
 
 **Starting assumption:** the Achouri dipolar generalized sheet transition conditions (GSTCs), together with the stated constitutive and plane-wave model. This repository verifies their scattering and optimization consequences. It does **not** derive GSTCs from Maxwell equations.
 
